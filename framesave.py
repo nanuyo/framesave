@@ -16,7 +16,7 @@ while frame_count < num_frames:
     cv2.imshow('Frame', frame)
 
     # Save the frame as an image
-    file_name = f"frame{frame_count}.jpg"
+    file_name = f"frame{frame_count+1}.jpg"
     cv2.imwrite(file_name, frame)
 
     frame_count += 1

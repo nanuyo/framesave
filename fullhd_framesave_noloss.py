@@ -25,20 +25,18 @@ while True:
     buffer.append(frame)
 
     # Display the current frame
-    cv2.imshow('Frame', frame)
+    #cv2.imshow('Frame', frame)
 
     # Check if enough frames are saved
     if len(buffer) == buffer_size:
         # Save the frames from the buffer
         for i, saved_frame in enumerate(buffer):
-            file_name = f"frame{i}.jpg"
+            file_name = f"frame{i+1}.jpg"
             cv2.imwrite(file_name, saved_frame)
-
         # Clear the buffer
         buffer.clear()
-
     # Break the loop if 'q' is pressed
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+#    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 # Release the webcam and close the window

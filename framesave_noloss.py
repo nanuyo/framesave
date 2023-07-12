@@ -26,7 +26,7 @@ while True:
     if len(buffer) == buffer_size:
         # Save the frames from the buffer
         for i, saved_frame in enumerate(buffer):
-            file_name = f"frame{i}.jpg"
+            file_name = f"frame{i+1}.jpg"
             cv2.imwrite(file_name, saved_frame)
 
         # Clear the buffer
